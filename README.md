@@ -4,9 +4,12 @@
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This salary calculator will allow you to add employee data to a table 
+and calculate a total monthly cost for paying employees' salaries.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Simply submit all employee's details one at a time and get
+a live look at total monthly cost as you add and remove employees from the table,
+alerting the user with red text if over a budget of $20,000.
 
 ## TO DO:
 
@@ -26,4 +29,4 @@ JS:
 - [x] STRETCH: Update the Total Monthly span to decrement once an employee is deleted.
 
 CSS: 
-- [] STRETCH: Make it STYLIN. I'm thinking 90's office chic. [unsplash](https://unsplash.com/) for images. Maybe a Windows 98 theme?
+- [x] STRETCH: Make it STYLIN. I'm thinking 90's office chic. [unsplash](https://unsplash.com/) for images. Maybe a Windows 98 theme?

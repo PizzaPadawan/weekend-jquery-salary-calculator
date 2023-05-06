@@ -1,18 +1,18 @@
 $(function(){
+    //click handler for submitting an employee to the table
    $("#submitButton").on('click', addEmployee) 
+   //click handler with descendant selector for deleting employee table row
    $("#employeeTable tbody").on('click', '.deleteButton', deleteEmployee)
 })
 
-//adding a global array to store salaries
-let employeeSalaries = []
+// monthlyCost global variable to be added and subtracted from to reflect totalMonthly
 let monthlyCost = 0;
-let salaryId = 0;
+
 
 function addEmployee(){
 // we need to append input values to the employeeTable
 // but only if all fields are filled in
-    
-
+// here's an if statment to throw an alert if any field is left blank
     if($("#firstName").val() === '' ||
         $("#lastName").val() === '' ||
         $("#employeeNumber").val() === '' ||
@@ -20,10 +20,7 @@ function addEmployee(){
         $("#annualSalary").val() === ''){
         alert("Please fill out all fields");
     } else {
-        // adding annualSalary values to an array
-        // may be more useful for totalMonthly calculation
-        employeeSalaries.push(Math.round(Number($("#annualSalary").val() / 12)));
-    // appending input values to the employeeTable
+    // appending input values and delete button with a class to table body
     // STRETCH: Adding salary class to applicable td for decrement function
     $("#employeeTable tbody").append(`
     <tr>
@@ -31,10 +28,12 @@ function addEmployee(){
         <td>${$("#lastName").val()}</td>
         <td>${$("#employeeNumber").val()}</td>
         <td>${$("#employeeTitle").val()}</td>
-        <td class="salary" data-salary="${salaryId}">${$("#annualSalary").val()}</td>
+        <td class="salary">${$("#annualSalary").val()}</td>
     <td><button class="deleteButton">Delete</button></td>
     </tr>
     `)
+    $(".salary")
+    // adding the monthly salary to our monthlyCost global variable
      monthlyCost += (Math.round(Number($("#annualSalary").val() / 12)))
     // emptying inputs
     $("#firstName").val('')
@@ -43,7 +42,7 @@ function addEmployee(){
     $("#employeeTitle").val('')
     $("#annualSalary").val('')
     }
-    salaryId ++
+    //run showTotal function to reflect addition to monthlyCost 
     showTotal();
 }
 
@@ -57,20 +56,21 @@ function showTotal(){
     // addEmployee function
     $("#totalMonthly").text(`$${monthlyCost}.00`);
 
+    // if statement to turn totalMonthly text red if monthlyCost is greater than
     if(monthlyCost > 20000){
-        $("#totalMonthly").css("color", "red");
-    }
+        $("#totalMonthly").css("color", "crimson");
+        
+    } else $("#totalMonthly").css("color", "black")
 }
 
 function deleteEmployee(event){
-    // for (let i = 0; i < employeeSalaries.length; i++){
-    //     if($(event.target).closest("td .salary").data("salary") === ){
-    //         monthlyCost -= employeeSalaries[i];
-    //     }
-    // }
-    monthlyCost -= (Number($(event.target).closest("tr").find("td.salary").text()) / 12)
-    salaryId --
+    // STRETCH: find the text in salary class of the closest table row,
+    // convert it to a number, divide it by 12,
+    // and decrement the value from monthlyCost
+    monthlyCost -= Math.round(Number($(event.target).closest("tr").find("td.salary").text()/12))
+    // STRETCH: run showTotal function to reflect subtraction from monthlyCost
     showTotal();
+    //target the closest table row to the targeted event and remove it.
     $(event.target).closest("tr").remove();
 }
 

@@ -1,3 +1,90 @@
-table, th, td{
-    border: 1px solid black;
+@font-face {
+    font-family: "Windows";
+    src: url("fonts/Windows\ Regular.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, teal, rebeccapurple, fuchsia);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body, button, input {
+    font-family: "Windows";
+}
+
+header, table, button, #addEmployees, .employeeList{
+    margin: 10px 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    background-color: rgb(158, 157, 157);
+    font-size: 18px;
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin: 5% 25%;;
+}
+
+header, table, #addEmployees, .employeeList{
+    width: 50%;
+}
+
+h1, h2, thead {
+    margin:0;
+    padding-left: 10px;
+    text-align: start;
+    background-color:mediumblue;
+    color: white;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: transparent;
+    border-right: 1px solid lightgray;
+}
+
+th {
+    padding: 5px 10px;
+}
+
+header p {
+    padding: 3%;
+}
+
+header p, tbody {
+    margin:0;
+    text-align: center;
+    border-top: transparent;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+tbody {
+    background-color: white;
+}
+
+input {
+    border-radius: 0;
+    margin: 2% 1%;
+    font-size: 18px;
+}
+
+.salaryHeader {
+    border-right: transparent;
+}
+
+.salary::before {
+    content: "$";
+}
+
+.salary::after{
+    content:".00"
 }
