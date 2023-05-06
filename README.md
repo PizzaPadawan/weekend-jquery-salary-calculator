@@ -17,9 +17,10 @@ HTML:
 - [x] "Total Monthly" with span to keep track of total monthly cost
 
 JS:
-- [] Add click event to add input.vals to employee table on submitButton click, along with a delete button for each row
-- [] Add alert to fire if user attempts to submit with any inputs left blank
-- [] Clear inputs after submitButton click event
+- [x] Add click event to add input.vals to employee table on submitButton click, along with a delete button for each row
+- [x] Add alert to fire if user attempts to submit with any inputs left blank
+- [x] Clear inputs after submitButton click event
+- [] Activate delete button via descendent selector
 - [] Calculate monthly costs in annualSalary field and append the amount to Total Monthly span
 - [] Format Total Monthly span to turn red if amount is > 20,000
 - [] STRETCH: Update the Total Monthly span to decrement once an employee is deleted.
