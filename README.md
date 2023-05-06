@@ -1,6 +1,4 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Salary Calculator
 
 ## Description
 
@@ -29,4 +27,4 @@ JS:
 - [x] STRETCH: Update the Total Monthly span to decrement once an employee is deleted.
 
 CSS: 
-- [x] STRETCH: Make it STYLIN. I'm thinking 90's office chic. [unsplash](https://unsplash.com/) for images. Maybe a Windows 98 theme?
+- [x] STRETCH: Make it STYLIN. Vaporwave / Windows 98 theme, anyone?
