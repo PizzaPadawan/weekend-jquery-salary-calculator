@@ -2,14 +2,26 @@
 
 ## Description
 
-This salary calculator will allow you to add employee data to a table 
+*This is my first weekend project for Tier 2 of Emerging Digital Academy.*
+
+This salary calculator web app will allow the user to add employee data to a table 
 and calculate a total monthly cost for paying employees' salaries.
 
 Simply submit all employee's details one at a time and get
 a live look at total monthly cost as you add and remove employees from the table,
 alerting the user with red text if over a budget of $20,000.
 
+## Usage
+
+1. Input employee First Name, Last Name, ID, Title, and Annual Salary fields
+2. Click "Submit" button.
+
+The "Total Monthly" section will update to reflect the total with every employee change,
+whether added or deleted.
+
 ## TO DO:
+
+The following is the checklist I used for reference when working on this project.
 
 HTML:
 - [x] "Salary Calculator" header section
@@ -28,3 +40,7 @@ JS:
 
 CSS: 
 - [x] STRETCH: Make it STYLIN. Vaporwave / Windows 98 theme, anyone?
+
+## Support
+
+If you have any issues or questions with this page, please email me at [kord.r.maurer@gmail.com](kord.r.maurer@gmail.com)
